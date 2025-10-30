@@ -4,78 +4,96 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Projetos - Sem Dono? Sem Problemas</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    .img-projeto {
-      max-width: 400px;       
-      width: 100%;            
-      height: auto;           
-      border-radius: 10px;    
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    .texto-centro {
-      text-align: center;
-    }
-  </style>
+
+  
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/navigation.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/projetos.css">
 </head>
+
 <body>
+ 
   <header>
-    <h1>Sem Dono? Sem Problemas</h1>
+    <h1>🐾 Sem Dono? <span class="destaque">Sem Problemas</span></h1>
+    <button class="menu-toggle" aria-label="Abrir menu">☰</button>
     <nav>
-      <ul>
+      <ul class="menu-list">
         <li><a href="index.html">Início</a></li>
-        <li><a href="projetos.html">Projetos</a></li>
+        <li class="dropdown">
+          <a href="#" class="projetos.html">Projetos ▾</a>
+          <ul class="submenu">
+            <li><a href="#">Adoção</a></li>
+            <li><a href="projetos.html">Voluntariado</a></li>
+            <li><a href="#">Doações</a></li>
+          </ul>
+        </li>
         <li><a href="cadastro.html">Cadastro</a></li>
+        <li><a href="index.html#contato">Contato</a></li>
       </ul>
     </nav>
   </header>
 
+  
+  <div class="alert alert-success">
+    💚 Bem-vindo ao projeto <strong>Sem Dono? Sem Problemas!</strong> — Junte-se a nós e ajude a transformar vidas.
+  </div>
+
+  
+  <section class="banner-projetos">
+    <h2>Conheça Nossos Projetos</h2>
+    <p>Transformando vidas, uma pata de cada vez 🐾</p>
+  </section>
+
+ 
   <main>
     <section>
       <h2 class="texto-centro">Projetos Sociais</h2>
-      <article>
-        <h3>Projeto Adoção Consciente</h3>
-        <p>
-          Nosso objetivo é promover a adoção responsável de animais resgatados,
-          garantindo que cada pet encontre um lar cheio de amor e segurança.
-        </p>
-        <img src="imagens/003.jpg" alt="Cachorro feliz" class="img-projeto">
-      </article>
-      <article>
-        <h3>Projeto Voluntariado Ativo</h3>
-        <p>
-          Acreditamos que o voluntariado transforma vidas — tanto dos animais
-          quanto das pessoas envolvidas. Voluntários ajudam nos cuidados diários,
-          eventos e campanhas de adoção.
-        </p>
-        <img src="imagens/004.jpg" alt="Voluntário cuidando de um cachorro" class="img-projeto">
-      </article>
-    </section>
 
-    <section>
-      <h2 class="texto-centro">Como se Tornar Voluntário</h2>
-      <p>
-        Para participar de nossos projetos como voluntário, basta realizar o cadastro 
-        e escolher a oportunidade que mais combina com você. Todos os participantes 
-        recebem certificados digitais de contribuição.
-      </p>
-      <div class="texto-centro">
-        <a href="cadastro.html" class="botao">Quero Ser Voluntário</a>
+      <div class="projetos-container">
+        <article class="card-projeto">
+          <img src="imagens/003.jpg" alt="Cachorro feliz" class="img-projeto" />
+          <h3>Projeto Adoção Consciente</h3>
+          <p>Promovemos a adoção responsável de animais resgatados, garantindo que cada pet encontre um lar cheio de amor e segurança.</p>
+          <a href="projeto-adocao.html" class="btn btn-primary">Saiba mais</a>
+        </article>
+
+        <article class="card-projeto">
+          <img src="imagens/004.jpg" alt="Voluntário cuidando de um cachorro" class="img-projeto" />
+          <h3>Projeto Voluntariado Ativo</h3>
+          <p>O voluntariado transforma vidas — tanto dos animais quanto das pessoas envolvidas. Nossos voluntários ajudam em eventos, campanhas e cuidados diários.</p>
+          <a href="voluntariado.html" class="btn btn-primary">Saiba mais</a>
+        </article>
+
+        <article class="card-projeto">
+          <img src="imagens/005.jpg" alt="Campanha de vacinação" class="img-projeto" />
+          <h3>Campanha de Vacinação</h3>
+          <p>Levamos vacinação gratuita para animais de comunidades vulneráveis, prevenindo doenças e promovendo saúde animal.</p>
+          <a href="campanha-vacinacao.html" class="btn btn-primary">Saiba mais</a>
+        </article>
       </div>
     </section>
 
-    <section>
-      <h2 class="texto-centro">Como Doar</h2>
-      <p>
-        As doações são essenciais para manter nossos projetos ativos e garantir 
-        o bem-estar dos animais. Você pode doar qualquer valor e acompanhar relatórios 
-        de transparência para saber como os recursos são usados.
-      </p>
+    <section class="como-ajudar">
+      <h2>Como Participar</h2>
+      <p>Quer fazer parte da mudança? Cadastre-se como voluntário, participe das campanhas e ajude nossos peludos a terem uma nova chance!</p>
+      <a href="cadastro.html" class="btn btn-secondary">Quero Ajudar</a>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 CRONOS — Todos os direitos reservados</p>
+    <p>&copy; 2025 Sem Dono? Sem Problemas — Todos os direitos reservados.</p>
   </footer>
+
+  <div class="toast">💚 Obrigado por visitar o projeto!</div>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.menu-list');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
