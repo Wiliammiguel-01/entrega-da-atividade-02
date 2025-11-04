@@ -2,155 +2,47 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sem Dono? Sem Problemas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/navigation.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/projetos.css" />
+  <link rel="stylesheet" href="css/cadastro.css">
+</head>
 
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/navigation.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/style.css">
-<header>
-  <h1>🐾 Sem Dono? <span class="destaque">Sem Problemas</span></h1>
-  <button class="menu-toggle" aria-label="Abrir menu">☰</button>
-  <nav>
-    <ul class="menu-list">
-      <li><a href="index.html" class="active">Início</a></li>
-      <li class="dropdown">
-  <a href="projetos.html" class="menu-link">Projetos ▾</a>
-  <ul class="submenu">
-    <li><a href="projetos.html#adocao">Adoção</a></li>
-    <li><a href="projetos.html#voluntariado">Voluntariado</a></li>
-    <li><a href="projetos.html#doacoes">Doações</a></li>
-  </ul>
-</li>
-      <li><a href="cadastro.html">Cadastro</a></li>
-      <li><a href="index.html#contato">Contato</a></li>
-    </ul>
+<body>
+  
+  <header>
+    <h1 class="logo">🐾 Sem Dono? <span class="destaque">Sem Problemas</span></h1>
+  <nav class="navbar">
+    <button class="menu-toggle" id="menu-toggle">☰</button>
+    <div class="menu-links" id="menu-links">
+      <a href="#/home" data-link>Início</a>
+      <a href="#/projetos" data-link>Projetos</a>
+      <a href="#/cadastro" data-link>Cadastro</a>
+    </div>
   </nav>
 </header>
 
-<div class="alert alert-success">
-    💚 Bem-vindo ao projeto <strong>Sem Dono? Sem Problemas!</strong> — Junte-se a nós e ajude a transformar vidas.
+  
+  <main id="app-content"></main>
+
+  <footer>
+  <div class="footer-content">
+    <p class="footer-logo">© 2025 <strong>Sem Dono? <span>Sem Problemas</span></strong></p>
+
+    <p class="footer-info">
+      <strong>Informações</strong><br>
+      Endereço: Rua Passagem Bingo, 123 - Bela Vista - SP<br>
+      Telefone: (15) 8002-8922<br>
+      E-mail: semdono.semproblemas@gmail.com
+    </p>
+
+    <p class="footer-thanks">💚 Obrigado por visitar o projeto!</p>
   </div>
-
-  <section class="alert alert-success">
-    💚 Bem-vindo ao projeto <strong>Sem Dono? Sem Problemas!</strong> — Junte-se a nós e ajude a transformar vidas.
-  </section>
-
-  <main>
-    
-
-
-<section id="quem-somos">
-  <h2>Quem Somos</h2>
-  <p>
-    O <strong>Sem Dono? Sem Problemas</strong> nasceu do amor pelos animais e do desejo de 
-    mudar vidas. Somos uma equipe de <strong>voluntários apaixonados</strong> que acredita que 
-    cada animal merece um lar cheio de carinho e respeito.
-  </p>
-  <p>
-    Atuamos com <strong>resgate, cuidados veterinários, adoção responsável</strong> e 
-    campanhas de conscientização, sempre com o objetivo de construir uma sociedade mais 
-    empática e solidária com os nossos amigos de quatro patas.
-  </p>
-
-  <div class="quem-somos-equipe">
-    <div class="membro">
-      <img src="imagens/011.jpg" alt="Foto de voluntário cuidando de um cachorro">
-      <h3>Ana Silva</h3>
-      <p>Coordenadora de Resgates</p>
-    </div>
-    <div class="membro">
-      <img src="imagens/013.jpg" alt="Foto de voluntária com um gato">
-      <h3>Lucas Pereira</h3>
-      <p>Responsável por Adoções</p>
-    </div>
-    <div class="membro">
-      <img src="imagens/012.jpg" alt="Foto de veterinário com cachorro">
-      <h3>Mariana Costa</h3>
-      <p>Veterinária Parceira</p>
-    </div>
-  </div>
-</section>
-
-    
-    <section>
-      <h2>Adote um Amigo</h2>
-      <p>Existem muitos animais precisando de um lar. <strong>Seja parte dessa mudança!</strong></p>
-
-      <div class="cards-container">
-        <div class="card">
-          <img src="imagens/007.jpg" alt="Cachorro Rex" />
-          <h3>Rex</h3>
-          <span class="status disponivel">Disponível</span>
-          <p>Rex é um cão brincalhão e amoroso, à espera de um lar cheio de carinho.</p>
-          <button class="btn verde">Adotar</button>
-        </div>
-
-        <div class="card">
-          <img src="imagens/009.jpg" alt="Gata Luna" />
-          <h3>Luna</h3>
-          <span class="status observacao">Em observação</span>
-          <p>Luna é uma gatinha calma, resgatada recentemente e pronta para receber amor.</p>
-          <button class="btn laranja">Saiba mais</button>
-        </div>
-
-        <div class="card">
-          <img src="imagens/008.jpg" alt="Cachorro Thor" />
-          <h3>Thor</h3>
-          <span class="status disponivel">Disponível</span>
-          <p>Thor é um cachorro leal e cheio de energia, pronto para brincar e proteger sua nova família.</p>
-          <button class="btn verde">Adotar</button>
-        </div>
-      </div>
-    </section>
-
-    <section class="sobre">
-      <h2>O projeto <span class="destaque">Sem Dono? Sem Problemas</span></h2>
-      <p>
-        Nasceu com o objetivo de conectar animais resgatados a pessoas dispostas a oferecer um novo lar cheio de amor.
-      </p>
-      <p>
-        Nossa equipe é formada por voluntários apaixonados por causas animais. Atuamos com resgate, cuidados veterinários,
-        acolhimento temporário e adoção responsável.
-      </p>
-      <button class="btn verde">Fale Conosco</button>
-    </section>
-
-    <section class="cadastro">
-      <h2>Cadastre-se e faça parte do projeto</h2>
-      <p>Preencha o formulário e junte-se a nós para ajudar animais a encontrarem um lar!</p>
-
-      <form>
-        <label for="nome">Nome completo:</label>
-        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required />
-
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required />
-
-        <label for="mensagem">Mensagem:</label>
-        <textarea id="mensagem" name="mensagem" placeholder="Conte como quer ajudar..." required></textarea>
-
-        <button type="submit" class="btn verde">Enviar</button>
-      </form>
-    </section>
-  </main>
-
-  <footer id="contato">
-    <h3>Informações</h3>
-    <p><strong>Endereço:</strong> Rua Passagem Bingo, 123 - Bela Vista - SP</p>
-    <p><strong>Telefone:</strong> (15) 8002-8922</p>
-    <p><strong>E-mail:</strong> semdono.semproblemas@gmail.com</p>
-    <p>💚 Obrigado por visitar o projeto!</p>
-  </footer>
-
-  <script>
-    const toggle = document.querySelector('.menu-toggle');
-    const menu = document.querySelector('.menu-list');
-    toggle.addEventListener('click', () => {
-      menu.classList.toggle('active');
-    });
-  </script>
+</footer>
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>

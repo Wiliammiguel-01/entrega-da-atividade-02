@@ -162,3 +162,28 @@ nav ul.menu-list li a.active {
     display: block;
   }
 }
+/* ================================
+   ESTRUTURA PRINCIPAL DAS PÁGINAS
+   ================================ */
+main#app-content {
+  padding: 3rem 1.5rem;
+  min-height: 70vh; 
+  background-color: #fff;
+}
+
+section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  line-height: 1.6;
+}
+
+
+footer {
+  background-color: #2e7d32;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  border-top: 4px solid #ffb300;
+}
