@@ -322,4 +322,26 @@ nav ul.menu-list {
   color: #666;
   font-size: 0.95rem;
 }
+/* ======== MODO ALTO CONTRASTE / ESCURO ======== */
+body.high-contrast {
+  background-color: #000000;   /* fundo preto */
+  color: #ffffff;              /* texto branco */
+}
+
+body.high-contrast a {
+  color: #00ffff;              /* links em ciano, contraste alto */
+}
+
+body.high-contrast button {
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid #ffffff;
+}
+
+body.high-contrast img {
+  filter: brightness(0.9) contrast(1.2);
+  
+}
+
+
 
